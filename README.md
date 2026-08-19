@@ -1,3 +1,5 @@
+<img src=".github/hive-logo.svg" alt="HIVE" width="64" height="64" />
+
 # HIVE — Releases & Soporte
 
 En este repositorio encontrarás las versiones publicadas de HIVE y el historial de cambios. La rama `main` de este repo es solo esta página y el changelog — cada versión publicada vive en su propio tag, aislado, sin historial mezclado con las demás.
