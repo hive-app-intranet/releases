@@ -1,0 +1,12 @@
+# build/ is where the sibling hive repo's build pipeline stages a fresh
+# build (BUILD_PATH in its .env) before scripts/publish.mjs promotes its
+# contents to this repo's own root — never committed itself.
+build
+
+# Safety net in case a hand-placed .env with real secrets, or node_modules/
+# from a local `npm install --omit=dev` smoke test, ever sits at this
+# repo's root before being committed — should never land in this public
+# repo.
+.env
+node_modules
+.DS_Store

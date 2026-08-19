@@ -1,0 +1,12 @@
+{
+  "name": "hive-release-tooling",
+  "private": true,
+  "description": "This repo's own release tooling — lives under .github/ (not the repo root, which is where each publish overwrites everything with the shipped build's own package.json) so it reads as repo housekeeping, not part of the product. Run from the repo root: npm --prefix .github/scripts run next-version / npm --prefix .github/scripts run publish",
+  "scripts": {
+    "next-version": "node next-version.mjs",
+    "publish": "node publish.mjs"
+  },
+  "dependencies": {
+    "kleur": "^4.1.5"
+  }
+}
