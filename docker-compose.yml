@@ -1,0 +1,41 @@
+# All-in-one production stack — api + Postgres + the bundled SeaweedFS
+# storage server, so a fresh install needs nothing but Docker and an
+# account. Same shape as the repo's own root docker-compose.yml (used
+# there for local dev only), plus the `api` service itself here.
+#
+# If you'd rather point STORAGE_PROVIDER at a real cloud bucket (s3/gcs/
+# azure/supabase) or an already-managed Postgres, just drop the matching
+# service below and fill its .env vars normally — nothing else changes.
+services:
+  api:
+    build: .
+    restart: unless-stopped
+    env_file: .env
+    ports:
+      - '${APP_PORT:-4000}:${APP_PORT:-4000}'
+    depends_on:
+      - postgres
+      - seaweedfs
+
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  seaweedfs:
+    image: chrislusf/seaweedfs:3.97
+    restart: unless-stopped
+    command: server -dir=/data -s3 -s3.port=${STORAGE_LOCAL_PORT:-8333}
+    ports:
+      - '${STORAGE_LOCAL_PORT:-8333}:${STORAGE_LOCAL_PORT:-8333}'
+    volumes:
+      - seaweedfs_data:/data
+
+volumes:
+  postgres_data:
+  seaweedfs_data:

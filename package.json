@@ -1,0 +1,37 @@
+{
+  "name": "hive",
+  "version": "v0.1.0",
+  "description": "HIVE — self-hosted company intranet.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node --env-file-if-exists=.env api.js",
+    "setup": "node --env-file-if-exists=.env cli.js setup run"
+  },
+  "engines": {
+    "node": ">=20.6.0"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.1095.0",
+    "@azure/identity": "^4.13.1",
+    "@azure/storage-blob": "^12.33.0",
+    "@faker-js/faker": "^10.5.0",
+    "@google-cloud/storage": "^8.0.0",
+    "@supabase/supabase-js": "^2.112.3",
+    "adm-zip": "^0.6.0",
+    "cli-progress": "^3.12.0",
+    "express": "^4.19.2",
+    "express-rate-limit": "^8.6.1",
+    "jose": "^5.10.0",
+    "kleur": "^4.1.5",
+    "kysely": "^0.28.17",
+    "multer": "^2.2.0",
+    "nanoid": "^6.0.1",
+    "node-cron": "^4.6.0",
+    "pg": "^8.22.0",
+    "pino": "^10.3.1",
+    "prompts": "^2.4.2",
+    "ws": "^8.21.3",
+    "zod": "^4.4.3"
+  }
+}

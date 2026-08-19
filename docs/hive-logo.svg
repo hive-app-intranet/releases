@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <!-- Dark backdrop baked in — the mark itself is white-on-transparent
+       (same source as apps/client/src/assets/logo/hive-logo.svg), which
+       needs a dark surface to read against on a light page. See
+       apps/client's Loader.tsx for the same treatment applied via CSS
+       there; here it has to be baked into the SVG since VitePress's
+       `logo` config just points at a flat image, no wrapper markup. -->
+  <rect x="0" y="0" width="100" height="100" rx="22" fill="#0a0a0a" />
+  <g fill="#FFFFFF">
+    <path d="M 50,15
+             L 79.3,32
+             L 79.3,66
+             L 50,83
+             L 20.7,66
+             L 20.7,32
+             Z
+             M 50,21.4
+             L 26.3,35.2
+             L 26.3,62.8
+             L 50,76.6
+             L 73.7,62.8
+             L 73.7,35.2
+             Z"/>
+    <polygon points="
+      36,39.5
+      42.4,35.8
+      42.4,46.4
+      57.6,46.4
+      57.6,26.4
+      64,30.1
+      64,55.9
+      57.6,59.6
+      57.6,53.6
+      42.4,53.6
+      42.4,64.2
+      36,60.5"/>
+  </g>
+</svg>
