@@ -1,6 +1,6 @@
 # HIVE
 
-<img src=".github/hive-logo.svg" alt="HIVE" />
+<img src="./assets//infographic.png" alt="HIVE" />
 
 HIVE es la intranet de tu empresa: un solo lugar para enterarte de las novedades, encontrar a un compañero, pedir tus días libres, revisar tus boletas de pago y tener a mano los documentos y beneficios de la empresa — sin depender de correos sueltos ni carpetas compartidas.
 
