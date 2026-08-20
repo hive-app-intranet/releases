@@ -1,6 +1,8 @@
-<img src=".github/hive-logo.svg" alt="HIVE" width="64" height="64" />
+# HIVE
 
-# HIVE — Releases & Soporte
+<img src=".github/hive-logo.svg" alt="HIVE" />
+
+HIVE es la intranet de tu empresa: un solo lugar para enterarte de las novedades, encontrar a un compañero, pedir tus días libres, revisar tus boletas de pago y tener a mano los documentos y beneficios de la empresa — sin depender de correos sueltos ni carpetas compartidas.
 
 En este repositorio encontrarás las versiones publicadas de HIVE y el historial de cambios. La rama `main` de este repo es solo esta página y el changelog — cada versión publicada vive en su propio tag, aislado, sin historial mezclado con las demás.
 
@@ -9,6 +11,8 @@ En este repositorio encontrarás las versiones publicadas de HIVE y el historial
 ## Sobre el producto (Beta)
 
 Esta etapa de HIVE todavía está en modo de pruebas: cada instalación se distribuye con una licencia interna, generada automáticamente durante el proceso de setup, que habilita todos los módulos disponibles en esta versión sin restricciones. Más adelante, algunos módulos pasarán a requerir una licencia específica.
+
+![¿Qué es HIVE?](.github/hive-overview.png)
 
 ## Instalación
 
